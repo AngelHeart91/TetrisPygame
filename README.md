@@ -3,9 +3,7 @@
 Learning Python and pygame by building a Tetris game.
 
 ## Features
-- Game loop
-- Player controls
-- Falling blocks
+1 - Create the game scene
 
 ## How to run
 ```bash

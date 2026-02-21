@@ -1,16 +1,15 @@
-# This is a sample Python script.
+import pygame, sys
 
-# Press Ctrl+F5 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+pygame.init()
 
+screen = pygame.display.set_mode((500, 600))    #screen display size
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press F9 to toggle the breakpoint.
+game_on = True
 
+while game_on:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            game_on = False
+            sys.exit()
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    pygame.display.update()
