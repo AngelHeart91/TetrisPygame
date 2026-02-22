@@ -2,7 +2,7 @@ import pygame
 
 class Grid:
     def __init__(self):
-        self.nb_rows = 15
+        self.nb_rows = 20
         self.nb_cols = 11
         self.cell_size = 30
 
@@ -18,6 +18,11 @@ class Grid:
             for j in range(len(tetromino.shape[i])):
                 if tetromino.shape[i][j] == 1:
                     grid_y = new_y + i
+                    grid_x = new_x + j
                     if grid_y >= self.nb_rows:
+                        return False
+                    elif grid_x >= self.nb_cols:
+                        return False
+                    elif grid_x < 0:
                         return False
         return True
