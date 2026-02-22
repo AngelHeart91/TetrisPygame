@@ -38,5 +38,6 @@ while game_on:
             elif event.key == pygame.K_RIGHT or event.key == pygame.K_d:
                 if grid.tetromino_position(tetromino, tetromino.x + 1, tetromino.y):
                     tetromino.move_right()
-
+            elif event.key == pygame.K_UP or event.key == pygame.K_w:
+                   tetromino.rotate()
     pygame.display.update()

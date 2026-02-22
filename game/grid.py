@@ -14,9 +14,9 @@ class Grid:
 
     #testing the position of tetromino if he is in the end of grid -> return False
     def tetromino_position(self, tetromino, new_x, new_y):
-        for i in range(len(tetromino.shape)):
-            for j in range(len(tetromino.shape[i])):
-                if tetromino.shape[i][j] == 1:
+        for i in range(len(tetromino.current)):
+            for j in range(len(tetromino.current[i])):
+                if tetromino.current[i][j] == 1:
                     grid_y = new_y + i
                     grid_x = new_x + j
                     if grid_y >= self.nb_rows:
