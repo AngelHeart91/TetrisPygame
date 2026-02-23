@@ -1,5 +1,5 @@
 import random,pygame
-from shape import SHAPES
+from game.shape import SHAPES
 
 class Tetromino:
     def __init__(self):
